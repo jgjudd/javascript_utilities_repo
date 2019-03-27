@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PLAYGROUND</title>
+</head>
+<body>
+	<button onclick="document.getElementById('demo').innerHTML = chessboard()">Execute</button>
+	<p></p>
+	<div id="demo"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+	
+	let chessboard = function() {
+		
+		let board = [];
+		let height = 20, width = 50;
+
+
+		for (i = 0; i <= height; i++) {
+			
+			let row = "";
+
+			if (i % 2 == 0) {
+				
+				for (j = 0; j <= width; j++){
+					row += ("#" + "_");	
+				}
+				board.push(row);
+			}
+			else {
+			
+				for (j = 0; j <= width; j++) {
+					row += ("_" + "#");
+				}
+				board.push(row);
+			}
+		}
+
+		return board.join('<br />');	
+	}
+	
+</script>

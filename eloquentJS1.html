@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PLAYGROUND</title>
+</head>
+<body>
+	<button onclick="document.getElementById('demo').innerHTML = fizzbuzz()">Execute</button>
+	<p></p>
+	<div id="demo"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+	let fizzbuzz = function() {
+		
+		let numbers = [];
+
+		for (i = 0; i <= 100; i++) {
+			if (i % 3 == 0 && i % 5 == 0){
+				numbers.push('fizzbuzz');
+			}
+			else if (i % 3 == 0) {
+				numbers.push('fizz');
+			}
+			else if (i % 5 == 0) {
+				numbers.push('buzz');
+			}
+			else {
+				numbers.push(i);
+			}
+		}
+
+		return numbers.join("<br />");
+
+	}
+</script>
